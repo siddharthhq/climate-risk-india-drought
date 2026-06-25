@@ -6,3 +6,6 @@ jupyter
 geopandas
 rasterio
 shapely
+xgboost
+scikit-learn
+scipy
