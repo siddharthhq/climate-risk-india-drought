@@ -34,7 +34,7 @@ City: Mumbai | Year: 2023
 
 ## 🗺️ Coverage
 
-**32 Indian cities | 2015–2023 | 288 scored location-year combinations**
+**32 Indian cities(with a deep dive in delhi) | 2015–2023 | 288 scored location-year combinations**
 
 | Module | Cities Covered |
 |---|---|
