@@ -39,6 +39,20 @@ def load_data():
     heatwave = pd.read_csv(os.path.join(OUT, "heatwave_risk_scores.csv"))
     cyclone  = pd.read_csv(os.path.join(OUT, "cyclone_risk_scores.csv"))
     landslide= pd.read_csv(os.path.join(OUT, "landslide_risk_scores.csv"))
+    
+    # Merge Delhi districts as cities
+    delhi_path = os.path.join(OUT, "delhi", "delhi_composite_scores.csv")
+    if os.path.exists(delhi_path):
+        d_comp = pd.read_csv(delhi_path)
+        d_comp = d_comp.rename(columns={
+            "district": "city",
+            "delhi_composite_score": "composite_score",
+            "delhi_composite_category": "composite_category"
+        })
+        comp = pd.concat([comp, d_comp], ignore_index=True)
+        # Fill missing hazards (e.g. cyclone/landslide for Delhi, air quality for national)
+        comp = comp.fillna(0)
+
     heatmap_path = os.path.join(OUT, "composite_heatmap.png")
     return comp, drought, flood, heatwave, cyclone, landslide, heatmap_path
 
@@ -151,6 +165,8 @@ def render_city_panel(city, year, key_suffix=""):
         "heatwave_risk_score":  float(row.get("heatwave_risk_score", 0) or 0),
         "cyclone_risk_score":   float(row.get("cyclone_risk_score",  0) or 0),
         "landslide_risk_score": float(row.get("landslide_risk_score",0) or 0),
+        "airquality_risk_score": float(row.get("airquality_risk_score",0) or 0),
+        "waterscarcity_risk_score": float(row.get("waterscarcity_risk_score",0) or 0),
     }
     comp_score = float(row["composite_score"])
     comp_cat   = str(row["composite_category"])
@@ -185,6 +201,14 @@ def render_city_panel(city, year, key_suffix=""):
             ("🌀 Cyclone",   scores["cyclone_risk_score"]),
             ("⛰️ Landslide", scores["landslide_risk_score"]),
         ]
+        
+        # Only add these if they have scores (applies to Delhi)
+        if scores["airquality_risk_score"] > 0 or scores["waterscarcity_risk_score"] > 0:
+            hazard_labels.extend([
+                ("💨 Air Quality", scores["airquality_risk_score"]),
+                ("🚰 Water Scarcity", scores["waterscarcity_risk_score"])
+            ])
+            
         rows_html = "".join(
             f'<div class="hazard-row"><span>{ico}</span>'
             f'<span style="color:{CAT_COLORS[cat_from_score(sc)]};font-weight:700;">{sc:.1f}</span></div>'
@@ -277,6 +301,10 @@ def render_city_panel(city, year, key_suffix=""):
             scores["cyclone_risk_score"],
             scores["landslide_risk_score"],
         ]
+        
+        if scores["airquality_risk_score"] > 0 or scores["waterscarcity_risk_score"] > 0:
+            categories.extend(["Air Quality", "Water Scarcity"])
+            values.extend([scores["airquality_risk_score"], scores["waterscarcity_risk_score"]])
         fig = go.Figure()
         fig.add_trace(go.Scatterpolar(
             r=values + [values[0]],

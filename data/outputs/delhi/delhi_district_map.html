@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_df0aa315e1c418f78088753261223089 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_df0aa315e1c418f78088753261223089" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_df0aa315e1c418f78088753261223089 = L.map(
+                "map_df0aa315e1c418f78088753261223089",
+                {
+                    center: [28.63, 77.22],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9224d2c45ac88c31cb511573df06d8fd = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9224d2c45ac88c31cb511573df06d8fd.addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+            var circle_marker_0f816a7ba8030f0800ddbab43ecfa85d = L.circleMarker(
+                [28.6921, 77.2979],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+        var popup_3cd8dd6b469d43e95922dde99dd77af7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_de85876d0c64c0ea43bfae951958ac61 = $(`<div id="html_de85876d0c64c0ea43bfae951958ac61" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial; min-width:220px;'>             <h4 style='margin:0 0 6px 0;'>North East Delhi</h4>             <table style='font-size:12px; border-collapse:collapse; width:100%;'>                 <tr><td><b>Composite</b></td><td><b style='color:#f39c12;'>43.4 — MEDIUM</b></td></tr>                 <tr><td>Drought</td><td>0.0</td></tr>                 <tr><td>Flood</td><td>1.0</td></tr>                 <tr><td>Heatwave</td><td>90.4</td></tr>                 <tr><td>Air Quality</td><td>100.0</td></tr>                 <tr><td>Water Scarcity</td><td>0.2</td></tr>             </table>         </div></div>`)[0];
+                popup_3cd8dd6b469d43e95922dde99dd77af7.setContent(html_de85876d0c64c0ea43bfae951958ac61);
+            
+        
+
+        circle_marker_0f816a7ba8030f0800ddbab43ecfa85d.bindPopup(popup_3cd8dd6b469d43e95922dde99dd77af7)
+        ;
+
+        
+    
+    
+            circle_marker_0f816a7ba8030f0800ddbab43ecfa85d.bindTooltip(
+                `<div>
+                     North East Delhi: 43.4 (MEDIUM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9abbea653f43ab539176c482e612d02e = L.circleMarker(
+                [28.5677, 77.2965],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+        var popup_faa7fad7163b601f8f90d047d52e1a5e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fdbc507fc0ef748c07497f53d6d0070e = $(`<div id="html_fdbc507fc0ef748c07497f53d6d0070e" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial; min-width:220px;'>             <h4 style='margin:0 0 6px 0;'>South East Delhi</h4>             <table style='font-size:12px; border-collapse:collapse; width:100%;'>                 <tr><td><b>Composite</b></td><td><b style='color:#f39c12;'>43.6 — MEDIUM</b></td></tr>                 <tr><td>Drought</td><td>0.0</td></tr>                 <tr><td>Flood</td><td>1.6</td></tr>                 <tr><td>Heatwave</td><td>90.4</td></tr>                 <tr><td>Air Quality</td><td>100.0</td></tr>                 <tr><td>Water Scarcity</td><td>0.8</td></tr>             </table>         </div></div>`)[0];
+                popup_faa7fad7163b601f8f90d047d52e1a5e.setContent(html_fdbc507fc0ef748c07497f53d6d0070e);
+            
+        
+
+        circle_marker_9abbea653f43ab539176c482e612d02e.bindPopup(popup_faa7fad7163b601f8f90d047d52e1a5e)
+        ;
+
+        
+    
+    
+            circle_marker_9abbea653f43ab539176c482e612d02e.bindTooltip(
+                `<div>
+                     South East Delhi: 43.6 (MEDIUM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ea13239b246a3bb1fcb70ebd84134e5 = L.circleMarker(
+                [28.6735, 77.2894],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+        var popup_20e4e36edcf96dd90b8265a6a4b13c41 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_26961852a98b4b4d848677a4821fcdc2 = $(`<div id="html_26961852a98b4b4d848677a4821fcdc2" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial; min-width:220px;'>             <h4 style='margin:0 0 6px 0;'>Shahdara</h4>             <table style='font-size:12px; border-collapse:collapse; width:100%;'>                 <tr><td><b>Composite</b></td><td><b style='color:#f39c12;'>44.3 — MEDIUM</b></td></tr>                 <tr><td>Drought</td><td>0.0</td></tr>                 <tr><td>Flood</td><td>0.9</td></tr>                 <tr><td>Heatwave</td><td>95.1</td></tr>                 <tr><td>Air Quality</td><td>100.0</td></tr>                 <tr><td>Water Scarcity</td><td>0.2</td></tr>             </table>         </div></div>`)[0];
+                popup_20e4e36edcf96dd90b8265a6a4b13c41.setContent(html_26961852a98b4b4d848677a4821fcdc2);
+            
+        
+
+        circle_marker_5ea13239b246a3bb1fcb70ebd84134e5.bindPopup(popup_20e4e36edcf96dd90b8265a6a4b13c41)
+        ;
+
+        
+    
+    
+            circle_marker_5ea13239b246a3bb1fcb70ebd84134e5.bindTooltip(
+                `<div>
+                     Shahdara: 44.3 (MEDIUM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_752878ff94de132cd3f23b56c2d52996 = L.circleMarker(
+                [28.5244, 77.1855],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+        var popup_fa994a823c0f24191e3c3adaba5de5fe = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f99c051d61468395531ad4d90b28064a = $(`<div id="html_f99c051d61468395531ad4d90b28064a" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial; min-width:220px;'>             <h4 style='margin:0 0 6px 0;'>South Delhi</h4>             <table style='font-size:12px; border-collapse:collapse; width:100%;'>                 <tr><td><b>Composite</b></td><td><b style='color:#f39c12;'>45.2 — MEDIUM</b></td></tr>                 <tr><td>Drought</td><td>0.0</td></tr>                 <tr><td>Flood</td><td>2.5</td></tr>                 <tr><td>Heatwave</td><td>97.5</td></tr>                 <tr><td>Air Quality</td><td>100.0</td></tr>                 <tr><td>Water Scarcity</td><td>0.8</td></tr>             </table>         </div></div>`)[0];
+                popup_fa994a823c0f24191e3c3adaba5de5fe.setContent(html_f99c051d61468395531ad4d90b28064a);
+            
+        
+
+        circle_marker_752878ff94de132cd3f23b56c2d52996.bindPopup(popup_fa994a823c0f24191e3c3adaba5de5fe)
+        ;
+
+        
+    
+    
+            circle_marker_752878ff94de132cd3f23b56c2d52996.bindTooltip(
+                `<div>
+                     South Delhi: 45.2 (MEDIUM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f1cb8d91c174717f30ca440b53d122cc = L.circleMarker(
+                [28.6508, 77.2219],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+        var popup_68bb2c54de94e6da9d26fd09da330f91 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ee189fec4687801445c34f9ee8993eeb = $(`<div id="html_ee189fec4687801445c34f9ee8993eeb" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial; min-width:220px;'>             <h4 style='margin:0 0 6px 0;'>Central Delhi</h4>             <table style='font-size:12px; border-collapse:collapse; width:100%;'>                 <tr><td><b>Composite</b></td><td><b style='color:#f39c12;'>45.3 — MEDIUM</b></td></tr>                 <tr><td>Drought</td><td>0.0</td></tr>                 <tr><td>Flood</td><td>4.8</td></tr>                 <tr><td>Heatwave</td><td>95.1</td></tr>                 <tr><td>Air Quality</td><td>100.0</td></tr>                 <tr><td>Water Scarcity</td><td>0.4</td></tr>             </table>         </div></div>`)[0];
+                popup_68bb2c54de94e6da9d26fd09da330f91.setContent(html_ee189fec4687801445c34f9ee8993eeb);
+            
+        
+
+        circle_marker_f1cb8d91c174717f30ca440b53d122cc.bindPopup(popup_68bb2c54de94e6da9d26fd09da330f91)
+        ;
+
+        
+    
+    
+            circle_marker_f1cb8d91c174717f30ca440b53d122cc.bindTooltip(
+                `<div>
+                     Central Delhi: 45.3 (MEDIUM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c8cccbf1504c7ae0724b2aaaa889adc = L.circleMarker(
+                [28.6271, 77.2907],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+        var popup_7d522de15f3f5169d7809e88bfc4e020 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3e28a691e500b29484774a8a975ddad0 = $(`<div id="html_3e28a691e500b29484774a8a975ddad0" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial; min-width:220px;'>             <h4 style='margin:0 0 6px 0;'>East Delhi</h4>             <table style='font-size:12px; border-collapse:collapse; width:100%;'>                 <tr><td><b>Composite</b></td><td><b style='color:#f39c12;'>45.3 — MEDIUM</b></td></tr>                 <tr><td>Drought</td><td>0.0</td></tr>                 <tr><td>Flood</td><td>5.1</td></tr>                 <tr><td>Heatwave</td><td>95.1</td></tr>                 <tr><td>Air Quality</td><td>100.0</td></tr>                 <tr><td>Water Scarcity</td><td>0.2</td></tr>             </table>         </div></div>`)[0];
+                popup_7d522de15f3f5169d7809e88bfc4e020.setContent(html_3e28a691e500b29484774a8a975ddad0);
+            
+        
+
+        circle_marker_7c8cccbf1504c7ae0724b2aaaa889adc.bindPopup(popup_7d522de15f3f5169d7809e88bfc4e020)
+        ;
+
+        
+    
+    
+            circle_marker_7c8cccbf1504c7ae0724b2aaaa889adc.bindTooltip(
+                `<div>
+                     East Delhi: 45.3 (MEDIUM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5df1c810fff822ca94b8a4cc56d62b7c = L.circleMarker(
+                [28.7219, 77.0878],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+        var popup_942c91093cdb68541f65daa05ba6cbbd = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_92af8d025f3c682015657a6b0cab1a34 = $(`<div id="html_92af8d025f3c682015657a6b0cab1a34" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial; min-width:220px;'>             <h4 style='margin:0 0 6px 0;'>North West Delhi</h4>             <table style='font-size:12px; border-collapse:collapse; width:100%;'>                 <tr><td><b>Composite</b></td><td><b style='color:#f39c12;'>45.3 — MEDIUM</b></td></tr>                 <tr><td>Drought</td><td>0.0</td></tr>                 <tr><td>Flood</td><td>2.6</td></tr>                 <tr><td>Heatwave</td><td>97.6</td></tr>                 <tr><td>Air Quality</td><td>100.0</td></tr>                 <tr><td>Water Scarcity</td><td>0.8</td></tr>             </table>         </div></div>`)[0];
+                popup_942c91093cdb68541f65daa05ba6cbbd.setContent(html_92af8d025f3c682015657a6b0cab1a34);
+            
+        
+
+        circle_marker_5df1c810fff822ca94b8a4cc56d62b7c.bindPopup(popup_942c91093cdb68541f65daa05ba6cbbd)
+        ;
+
+        
+    
+    
+            circle_marker_5df1c810fff822ca94b8a4cc56d62b7c.bindTooltip(
+                `<div>
+                     North West Delhi: 45.3 (MEDIUM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f9b816555286022a3fbe5d339c29f623 = L.circleMarker(
+                [28.6139, 77.209],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+        var popup_d40a5559895b7efa601bb408d57777c8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9aaf2c3a4c28b32977d029e8ca7f16dd = $(`<div id="html_9aaf2c3a4c28b32977d029e8ca7f16dd" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial; min-width:220px;'>             <h4 style='margin:0 0 6px 0;'>New Delhi</h4>             <table style='font-size:12px; border-collapse:collapse; width:100%;'>                 <tr><td><b>Composite</b></td><td><b style='color:#f39c12;'>45.5 — MEDIUM</b></td></tr>                 <tr><td>Drought</td><td>0.0</td></tr>                 <tr><td>Flood</td><td>9.7</td></tr>                 <tr><td>Heatwave</td><td>90.4</td></tr>                 <tr><td>Air Quality</td><td>100.0</td></tr>                 <tr><td>Water Scarcity</td><td>0.2</td></tr>             </table>         </div></div>`)[0];
+                popup_d40a5559895b7efa601bb408d57777c8.setContent(html_9aaf2c3a4c28b32977d029e8ca7f16dd);
+            
+        
+
+        circle_marker_f9b816555286022a3fbe5d339c29f623.bindPopup(popup_d40a5559895b7efa601bb408d57777c8)
+        ;
+
+        
+    
+    
+            circle_marker_f9b816555286022a3fbe5d339c29f623.bindTooltip(
+                `<div>
+                     New Delhi: 45.5 (MEDIUM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4f6471032d70b068d4940a72681e335 = L.circleMarker(
+                [28.7041, 77.1025],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+        var popup_4ecd15570f45eb191bb9ab53b6363da9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c366de626d953643be3caeb2f9ed0cd2 = $(`<div id="html_c366de626d953643be3caeb2f9ed0cd2" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial; min-width:220px;'>             <h4 style='margin:0 0 6px 0;'>North Delhi</h4>             <table style='font-size:12px; border-collapse:collapse; width:100%;'>                 <tr><td><b>Composite</b></td><td><b style='color:#f39c12;'>46.7 — MEDIUM</b></td></tr>                 <tr><td>Drought</td><td>0.0</td></tr>                 <tr><td>Flood</td><td>8.6</td></tr>                 <tr><td>Heatwave</td><td>97.6</td></tr>                 <tr><td>Air Quality</td><td>100.0</td></tr>                 <tr><td>Water Scarcity</td><td>0.2</td></tr>             </table>         </div></div>`)[0];
+                popup_4ecd15570f45eb191bb9ab53b6363da9.setContent(html_c366de626d953643be3caeb2f9ed0cd2);
+            
+        
+
+        circle_marker_e4f6471032d70b068d4940a72681e335.bindPopup(popup_4ecd15570f45eb191bb9ab53b6363da9)
+        ;
+
+        
+    
+    
+            circle_marker_e4f6471032d70b068d4940a72681e335.bindTooltip(
+                `<div>
+                     North Delhi: 46.7 (MEDIUM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f292e105f7300366859fc6feb9936c60 = L.circleMarker(
+                [28.6541, 77.0832],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.01, "stroke": true, "weight": 3}
+            ).addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+        var popup_002167c14a6a5e9b417b416511bf5df0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c6459701db12c05e60f592e9df1f10f0 = $(`<div id="html_c6459701db12c05e60f592e9df1f10f0" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial; min-width:220px;'>             <h4 style='margin:0 0 6px 0;'>West Delhi</h4>             <table style='font-size:12px; border-collapse:collapse; width:100%;'>                 <tr><td><b>Composite</b></td><td><b style='color:#f39c12;'>48.1 — MEDIUM</b></td></tr>                 <tr><td>Drought</td><td>0.0</td></tr>                 <tr><td>Flood</td><td>13.8</td></tr>                 <tr><td>Heatwave</td><td>97.5</td></tr>                 <tr><td>Air Quality</td><td>100.0</td></tr>                 <tr><td>Water Scarcity</td><td>0.8</td></tr>             </table>         </div></div>`)[0];
+                popup_002167c14a6a5e9b417b416511bf5df0.setContent(html_c6459701db12c05e60f592e9df1f10f0);
+            
+        
+
+        circle_marker_f292e105f7300366859fc6feb9936c60.bindPopup(popup_002167c14a6a5e9b417b416511bf5df0)
+        ;
+
+        
+    
+    
+            circle_marker_f292e105f7300366859fc6feb9936c60.bindTooltip(
+                `<div>
+                     West Delhi: 48.1 (MEDIUM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76991d17b652eeab8888d31fead03229 = L.circleMarker(
+                [28.5672, 77.0699],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.185, "stroke": true, "weight": 3}
+            ).addTo(map_df0aa315e1c418f78088753261223089);
+        
+    
+        var popup_dcf3a59f9f091abd89efde3c3f8f6902 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d55f28745d7426fa6f968b20eeb7d32f = $(`<div id="html_d55f28745d7426fa6f968b20eeb7d32f" style="width: 100.0%; height: 100.0%;">         <div style='font-family:Arial; min-width:220px;'>             <h4 style='margin:0 0 6px 0;'>South West Delhi</h4>             <table style='font-size:12px; border-collapse:collapse; width:100%;'>                 <tr><td><b>Composite</b></td><td><b style='color:#f39c12;'>49.1 — MEDIUM</b></td></tr>                 <tr><td>Drought</td><td>0.0</td></tr>                 <tr><td>Flood</td><td>19.9</td></tr>                 <tr><td>Heatwave</td><td>95.1</td></tr>                 <tr><td>Air Quality</td><td>100.0</td></tr>                 <tr><td>Water Scarcity</td><td>0.8</td></tr>             </table>         </div></div>`)[0];
+                popup_dcf3a59f9f091abd89efde3c3f8f6902.setContent(html_d55f28745d7426fa6f968b20eeb7d32f);
+            
+        
+
+        circle_marker_76991d17b652eeab8888d31fead03229.bindPopup(popup_dcf3a59f9f091abd89efde3c3f8f6902)
+        ;
+
+        
+    
+    
+            circle_marker_76991d17b652eeab8888d31fead03229.bindTooltip(
+                `<div>
+                     South West Delhi: 49.1 (MEDIUM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
