@@ -8,7 +8,8 @@
 ![Hazards](https://img.shields.io/badge/Hazards-7-purple)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-A machine learning system that assigns a **0–100 climate risk score** to Indian locations across multiple natural hazards — built for use by banks, insurers, and real estate developers in property pre-approval and risk assessment.
+**Empowering financial institutions**—banks, lenders, insurers, and investors—to seamlessly integrate climate risk insights into credit underwriting, portfolio management, and regulatory compliance.
+A machine learning system that delivers a **0–100 climate risk score** for Indian locations across multiple natural hazards, enabling data‑driven risk analysis and proactive decision‑making.
 
 Two tiers of coverage:
 - **National** — 32 cities across India, 5 hazards
